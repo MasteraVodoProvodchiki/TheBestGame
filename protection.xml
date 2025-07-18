@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="true"?>
+<protection>
+  <projectId>PRJ-md7nbkfo</projectId>
+  <options>
+    <antiDebug>true</antiDebug>
+    <obfuscation>medium</obfuscation>
+    <compression>false</compression>
+  </options>
+  
+  <files>
+    <file>BestGame2/Binaries/Win64/BestGame2.exe</file>
+  </files>
+</protection> 

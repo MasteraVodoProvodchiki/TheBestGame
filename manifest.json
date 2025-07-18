@@ -1,0 +1,28 @@
+{
+  "packageId": "mvp.bestgame.app",
+  "name": "The Best Game",
+  "appVersion": "1.1.0",
+  "run":{
+      "all":[],
+      "win":[
+         {
+			"alias": "mvp.bestgame.app.main",
+			"title": "The Best Game",
+            "main":true,
+            "subPath":"",
+            "launchFile":"BestGame2.exe",
+            "args":[]
+         }
+      ],
+      "linux":[
+         {
+			"alias": "mvp.bestgame.app.main",
+			"title": "The Best Game",
+            "main":true,
+            "subPath":"",
+            "launchFile":"BestGame2",
+            "args":[]
+         }
+      ]
+   }
+}
