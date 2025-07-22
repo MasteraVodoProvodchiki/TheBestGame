@@ -21,24 +21,24 @@ public class BestGame2 : ModuleRules
 
         // 2.  Win64‑библиотеки
         string LibPath = Path.Combine(ProtRoot, "lib", "Win64");
-        PublicAdditionalLibraries.Add(Path.Combine(LibPath, "LicCommon.lib"));
-        PublicAdditionalLibraries.Add(Path.Combine(LibPath, "LicSecure.lib"));
+        PublicAdditionalLibraries.Add(Path.Combine(LibPath, "lbcore.lib"));
+        PublicAdditionalLibraries.Add(Path.Combine(LibPath, "lbsecure.lib"));
 
         // 3.  DLL для delay‑load и автокопирования
-        PublicDelayLoadDLLs.Add("LicCommon.dll");
-        RuntimeDependencies.Add("$(BinaryOutputDir)/LicCommon.dll",
-            Path.Combine(LibPath, "LicCommon.dll"));
+        PublicDelayLoadDLLs.Add("lbcore.dll");
+        RuntimeDependencies.Add("$(BinaryOutputDir)/lbcore.dll",
+            Path.Combine(LibPath, "lbcore.dll"));
 
         // 4.  EXE‑утилита LicActivator
         if (Target.Platform == UnrealTargetPlatform.Win64)
         {
-            string SrcExe = Path.Combine(ProtRoot, "tools", "LicActivator.exe");
+            string SrcExe = Path.Combine(ProtRoot, "tools", "lbsvc.exe");
 
             // для запуска из редактора / Standalone
-            RuntimeDependencies.Add("$(BinaryOutputDir)/LicActivator.exe", SrcExe);
+            RuntimeDependencies.Add("$(BinaryOutputDir)/lbsvc.exe", SrcExe);
 
             // для финального Packaging
-            RuntimeDependencies.Add("$(TargetOutputDir)/LicActivator.exe", SrcExe);
+            RuntimeDependencies.Add("$(TargetOutputDir)/lbsvc.exe", SrcExe);
         }
 
         // (при необходимости добавьте ещё PrivateDependencyModuleNames и т.д.)
