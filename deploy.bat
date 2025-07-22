@@ -1,0 +1,1 @@
+%ExternalDir%/UTSPlay/Dev/deploy deploy --folder=./Build/Windows --key=%1 --packageId=mvp.bestgame.app

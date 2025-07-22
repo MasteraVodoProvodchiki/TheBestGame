@@ -21,4 +21,19 @@ public:
 	virtual void Shutdown()  override;
 
 	PROTECT_METHOD_DECL(void, ProtectedFunction, ())
+
+	UFUNCTION()
+	bool IsPremium() const
+	{
+		return HasFeature("premium");
+	}
+
+
+private:
+	bool HasFeature(const FString& feature) const
+	{
+		return features.Contains(feature);
+	}
+
+	TArray<FString> features;
 };
